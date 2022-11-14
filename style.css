@@ -1,0 +1,305 @@
+*{
+    margin:0;
+    padding:0;
+}
+#cursor{
+    position:fixed;
+    width: 8px;
+    height:8px;
+    z-index: 999;
+    background: blue;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px blue,
+                0 0 20px blue,
+                0 0 20px blue;
+    animation: cursorColor 5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+@keyframes cursorColor {
+    0%{
+        filter: hue-rotate(0);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+#cursor:before{
+    /* content:""; */
+    position:fixed;
+    background:green;
+    width:50px;
+    height:50px;
+    opacity: 0.2;
+    border-radius: 50%;
+    transform: translate(-30%, -30%);
+}
+#NFT_Logo{
+    /* background:linear-gradient(45deg, #ff0, #d32); */
+    position:absolute;
+    z-index: 999;
+    border:#d32 groove 2px;
+    border-radius:100%;
+    padding:10px;
+    margin: 10px 0 0 20px;
+    cursor:pointer;
+    animation: glows 2s ease forwards infinite;
+    
+}
+@keyframes glows {
+    0%{background:linear-gradient(25deg, rgb(116, 116, 8), #d32, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
+    25%{background:linear-gradient(25deg,  rgb(116, 116, 8), red, #d32);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
+    50%{background:linear-gradient(25deg, red, rgb(116, 116, 8), #d32);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
+    75%{background:linear-gradient(25deg,  rgb(116, 116, 8), red, #d32);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
+    100%{background:linear-gradient(25deg,  rgb(116, 116, 8), #d32, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
+}
+#NFT_Logo:hover{
+    border:#ff0 groove 3px;
+    transition: 0.5s ease-in-out;
+    padding:9px;
+}
+ #NFT_Logo h1{
+    font-family:Cooper;
+    font-size: 200%;
+    font-weight:bolder;
+}
+header{
+    background:linear-gradient(to right, purple, blue);
+    width:100%;
+    height:10vh;
+    transition: 0.5s;
+    background-position:left;
+    background-size: 200%;
+    z-index:999;
+}
+header:hover{
+    background-position:right;
+
+}
+#bar_pocket{
+    display:none;
+}
+i{
+    margin: 0 10px 0 0;
+}
+header div ul{
+    text-align: right;
+    z-index: 999;
+    /* height:2vh; */
+}
+header div ul li{
+    text-decoration: none;
+    color: #fff;
+    font-size: larger;
+    font-weight: bolder;
+    margin: 20px 20px 20px 20px;
+    padding:5px;
+    display:inline-flex;
+    z-index: 999;
+}
+header div ul li:hover{
+    color:aqua;
+    cursor: pointer;
+    border:#d32 solid 2px;
+    border-radius:50px;
+    padding:4px;
+    transition: 0.7s ease-in-out;
+    margin: 0 20px 0 20px;
+    z-index: 999;
+}
+
+#active{
+    border:#ff0 solid 2px;
+    border-radius: 20px 0 20px 0;
+    color:#ff0;
+    z-index:999;
+}
+#active:hover{
+    margin: 20px 20px 20px 20px;
+    padding:4px;
+    animation: glow 5s ease forwards infinite ;
+    
+}
+a{
+    text-decoration: none;
+    display:grid;
+    grid-template-columns: 10% 90%;
+
+    color:inherit;
+}
+/* a p{
+    margin:0px 0 0;
+} */
+
+@keyframes glow {
+    30%{
+        border: 2px solid #d32;
+    }
+    50%{
+        border: 2px solid #213;
+    }
+    100%{
+        border: 2px solid aqua;
+    }
+}
+
+#wrapperPhone{
+    display:none;
+    opacity: 0;
+    margin:-100% -100% -100% -100%;
+    z-index: 0;
+    padding:-100%;
+    position: absolute;
+}
+/* CONTACT PAGE */
+#contactBody{
+    background:linear-gradient(to right, purple, blue);
+}
+#contactBody h1{
+    text-align: center;
+    color:#fff;
+    margin: 0 0 4% 0;
+}
+#contactPage{
+    background:blueviolet;
+    width:50%;
+    margin: 2% auto;
+    padding:5%;
+    border:#ff0 2px groove;
+    border-radius: 10% 10% 0 0/ 10% 10% 0 0;
+
+}
+#contactPage label{
+    font-weight: bold;
+    color:#fff
+}
+#contactPage input{
+    width:80%;
+    margin:5% 0 5% 5%;
+    border:none;
+    outline:none;
+    border-bottom:#fff solid 2px;
+    background:none;
+    color:#fff;
+} 
+#submit #submit{
+    font-weight: bolder;
+    color:#fff;
+    background:linear-gradient(to right, purple, blue);
+    border:2px solid blue;
+    border-radius: 10px;
+    width:10%;
+    padding: 1%;
+    margin: 0 0 0 85%;
+    cursor:pointer;
+}
+/* MEDIA QUERY */
+@media screen and (max-width:960px) {
+  header{display:none;} 
+  #NFT_Logo h1{
+    font-size:90%;
+    margin:0;
+  } 
+  #forPhone{
+    position:absolute;
+    display:block;
+    width:100%;
+    height:12vh;
+    background:linear-gradient(to right, purple, blue);
+  }
+  #barPocket{
+    z-index: 999;
+    position:absolute;
+    display:block;
+    margin:5% 0 0 80%;
+    width:15%;
+    height:30vh;
+  }
+  .bar{
+    background:rgb(68, 16, 68);
+    width:50px;
+    height:1vh;
+  }
+  #bar1{
+    margin:5% 0 0 0;
+  }
+  #bar2{
+    margin:5% 0 0 0;
+  }
+  #bar3{
+    margin:5% 0 0 0;
+  }
+  #wrapperPhone{
+    display:block;
+    width:70%;
+    opacity:1;
+    margin:-200% 0 0 30%;
+    z-index: 1;
+    padding:2%;
+    border-radius: 0 0 0 10%;
+    border:#ff0 solid 2px;
+}
+  #wrapperPhone.active{
+    display:block;
+    width:70%;
+    height:280px;
+    opacity:1;
+    margin:18% 0 0 30%;
+    z-index: 1;
+    padding:0%;
+    position: absolute;
+}
+  #dropdown-content li{
+    display:flex;
+    margin:20px;
+  }
+  #barPocket.is-active .bar:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+    width:100%;
+  }
+  #barPocket.is-active .bar:nth-child(2){
+    display:none;
+  }
+  #barPocket.is-active .bar:nth-child(3){
+    transform:translateY(8px) rotate(-45deg);
+    margin:0 0 40% 0;
+    width:100%;
+  }
+
+  /* CONTACT PAGE */
+  #contactPage h1{
+    margin:50% 0 5px 0;
+    background:#213;
+    border-radius: 50%/20%;
+    padding:0 15px 0 15px;
+    font-size: medium;
+  }
+  #contactPage form label{
+    font-size: small;
+  }
+  #contactPage form input{
+    width:40%;
+  }
+  #submit #submit{
+    font-weight: bolder;
+    color:#fff;
+    background:linear-gradient(to right, purple, blue);
+    border:2px solid blue;
+    border-radius: 10px;
+    width:30%;
+    padding: 1%;
+    margin: 0 0 0 70%;
+    cursor:pointer;
+}
+}
